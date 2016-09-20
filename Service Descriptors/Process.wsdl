@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1474208761786" xmlns:tns="http://www.example.org/wsdl/1474208761570" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Process" targetNamespace="http://www.example.org/wsdl/1474208761570">
+  <wsdl:import namespace="http://www.example.org/schema/1474208761786"/>
+  <wsdl:message name="sayhelloRequest">
+    <wsdl:part element="extns:sayhelloRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="sayhelloResponse">
+    <wsdl:part element="extns:sayhelloResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="HelloWorld">
+    <wsdl:operation name="sayhello">
+      <wsdl:input message="tns:sayhelloRequest" name="sayhelloInput"/>
+      <wsdl:output message="tns:sayhelloResponse" name="sayhelloOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
